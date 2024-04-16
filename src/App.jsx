@@ -5,6 +5,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Home from "./page/Home";
 import About from "./page/About";
+import Footer from "./page/Footer";
+import Navbar from "./page/Navbar";
+import Contoh from "./page/Compponent/Contoh";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,10 +15,12 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

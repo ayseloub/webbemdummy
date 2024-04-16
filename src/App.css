@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.relative:hover .absolute {
+  opacity: 1;
+  visibility: visible;
+}
+
+.options {
+  display: none;
+}
+
+.relative:hover .options {
+  display: block;
+}
