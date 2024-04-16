@@ -7,6 +7,7 @@ import Home from "./page/Home";
 import About from "./page/About";
 import Footer from "./page/Footer";
 import Navbar from "./page/Navbar";
+import Contoh from "./page/Compponent/Contoh";
 
 function App() {
   const [count, setCount] = useState(0);

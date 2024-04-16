@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-
+        'lato': ["Lato", "sans-serif"],
       },
       colors:{
         "cust-green": "#208B71",
@@ -15,7 +15,16 @@ export default {
         "cust-white" : "#FFFEFB",
         "cust-gray" : "#929292",
         "cust-artikel" : "#208B71",
+        "cust-orange": "#FE7201",
+        "cust-bg-orange": "#FDE6BA",
+        'cust-bg-orange2': '#FE7201',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['hover'],
+      textColor: ['hover'],
     },
   },
   plugins: [],
