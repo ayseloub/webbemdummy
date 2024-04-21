@@ -19,6 +19,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/Contoh2" element={<Contoh2 />} />
         </Routes>
         <Footer />
       </BrowserRouter>
