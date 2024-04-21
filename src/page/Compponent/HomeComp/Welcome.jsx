@@ -1,6 +1,8 @@
 import React from "react";
 import background from "../../../assets/welcoming.svg"
 import gedung from "../../../assets/gedungFilkom.png"
+import arthakaraBubble from "../../../assets/arthakaraBubble.png"
+import awanKrem from "../../../assets/awanKrem.png"
 import { motion } from "framer-motion";
 import Atropos from "atropos/react";
 
@@ -18,7 +20,7 @@ const Welcome = () => {
         <img
           data-atropos-offset="15"
           className="w-[150px] object-cover active:w-[100px]"
-          src="https://res.cloudinary.com/dkncrhkfo/image/upload/v1713457070/arthakaraBubble_ansvjg.png"
+          src={arthakaraBubble}
           alt="MissingIMG"
         />
       </Atropos>
@@ -90,6 +92,12 @@ const Welcome = () => {
             className="lg:w-[550px] mx-auto mt-auto sm:w-[400px] w-[350px]"
           />
         </div>
+      </div>
+      <div>
+        <img 
+        src={awanKrem} 
+        className="" 
+        />
       </div>
     </div>
   );
