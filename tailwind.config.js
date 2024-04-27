@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'lato': ["Lato", "sans-serif"],
+        'poppins': ["Poppins", "sans-serif"],
       },
       colors:{
         "cust-green": "#208B71",
