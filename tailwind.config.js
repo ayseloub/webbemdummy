@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'lato': ["Lato", "sans-serif"],
+        'frog': ["MisterFrog.ttf", "sans-serif"],
       },
       colors:{
         "cust-green": "#208B71",
@@ -13,6 +14,7 @@ export default {
         "cust-orange" : "#FE7201",
         "cust-background" : "#FDFADB",
         "cust-white" : "#FFFEFB",
+        "cust-yellow" : "#FDFADB",
         "cust-gray" : "#929292",
         "cust-artikel" : "#208B71",
         "cust-orange": "#FE7201",

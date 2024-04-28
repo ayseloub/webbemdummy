@@ -1,8 +1,9 @@
-# React + Vite
+# Website BEM FILKOM 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hola Guys, Welcome to Repository Web BEM FILKOM 2024 🙏🏼✨
 
-Currently, two official plugins are available:
+In this repository, you will find the latest developments and projects of the Website Company being undertaken by the PIT BEM team of the Faculty of Computer Science, Universitas Brawijaya, for the year 2024.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Feel free to explore the projects, contribute, or reach out to us if you have any questions or ideas you'd like to share. Together, let's shape the future of web technology!
+
+Happy browsing!
