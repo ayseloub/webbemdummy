@@ -9,7 +9,7 @@ const Landing = () => {
     <div>
       <Contoh />
       <Tentang />
-      <Artikel />
+      <Artikel/>
       <Segment4 />
     </div>
   );
