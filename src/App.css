@@ -54,21 +54,3 @@
 .relative:hover .options {
   display: block;
 }
-
-.popper-content {
-  background-color: cust-orange;
-  border-radius: 999px;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  animation: wiggle 0.5s infinite;
-}
-
-@keyframes wiggle {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
