@@ -85,14 +85,14 @@ const Footer = () => {
               <a
                 href="https://filkom.ub.ac.id/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 FILKOM UB
               </a>
               <a
                 href="https://bemfilkom.ub.ac.id/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 Nawasena 2023
               </a>
@@ -100,28 +100,28 @@ const Footer = () => {
               <a
                 href="https://bemfilkom.ub.ac.id/2022/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 Aryakarsa 2022
               </a>
               <a
                 href="https://bemfilkom.ub.ac.id/2021/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 Mozaik Asa 2021
               </a>
               <a
                 href="https://bemfilkom.ub.ac.id/2020/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 Elaborasi Makna 2020
               </a>
               <a
                 href="https://bemfilkom.ub.ac.id/2019/"
                 target="_blank"
-                className="hover:underline text-2xl font-thin opacity-80"
+                className="hover:underline text-2xl"
               >
                 Atmabara 2019
               </a>

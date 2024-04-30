@@ -35,7 +35,7 @@ const Navbar = () => {
                 <button
                   key={index}
                   type="button"
-                  className="hover:text-cust-orange hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
+                  className="hover:text-cust-orange hover:font-bold w-full text-nowrap hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
                 >
                   {kabinet}
                 </button>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <button
                   key={index}
                   type="button"
-                  className="hover:text-cust-orange hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
+                  className="hover:text-cust-orange hover:font-bold w-full text-nowrap hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
                 >
                   {item}
                 </button>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <button
                   key={index}
                   type="button"
-                  className="hover:text-cust-orange hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
+                  className="hover:text-cust-orange hover:font-bold text-nowrap w-full hover:bg-cust-bg-orange font-lato text-gray-700 block px-4 py-2 text-sm"
                 >
                   {item}
                 </button>
