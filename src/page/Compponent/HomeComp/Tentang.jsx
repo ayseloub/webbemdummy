@@ -11,14 +11,14 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Tentang = () => {
     return (
-        <div className='w-full bg-cust-background h-max relative xl:py-0 xl:pb-0'>
+        <div className='w-full bg-cust-background h-max py-[30rem] relative xl:py-0 xl:pb-0'>
             {/* BACKGROUND */}
-            <img src={bgTentang} alt="" className='' />
+            <img src={bgTentang} alt="" className='hidden xl:block' />
 
-            <img src={daunKiri} alt="daun kiri" className='h-24 xl:h-60 left-0 top-0 absolute xl:-top-8' />
-            <img src={daunKanan} alt="daun kanan" className='h-24 xl:h-60 right-0 top-0 absolute xl:-top-8' />
+            <img src={daunKiri} alt="daun kiri" className='h-20 xl:h-60 left-0 top-0 absolute xl:-top-8' />
+            <img src={daunKanan} alt="daun kanan" className='h-20 xl:h-60 right-0 top-0 absolute xl:-top-8' />
             <div className='w-full flex h-max absolute justify-center top-8 xl:top-7'>
-            <img src={TentangTittle} alt="" className='absolute w-full mx-auto text-4xl xl:text-7xl xl:pt-8 xl:w-[43rem]' />
+            <img src={TentangTittle} alt="" className='absolute w-[20rem] mx-auto text-4xl xl:text-7xl xl:pt-8 xl:w-[43rem]' />
             </div>
             <div className='absolute h-max pb-96 xl:pb-56 top-36 xl:top-64 xl:flex xl:flex-row-reverse xl:mx-20 xl:gap-40'>
                 <img src={logoTentang} alt="logo BEM" className=' w-44 h-64 mx-auto xl:hidden' />
