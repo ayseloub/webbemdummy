@@ -6,6 +6,7 @@ import Artikel from "./Artikel";
 import Sambutan from "./Sambutan";
 
 
+
 const Landing = () => {
   return (
     <div>
