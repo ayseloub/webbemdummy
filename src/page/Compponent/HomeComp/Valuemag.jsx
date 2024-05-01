@@ -5,8 +5,8 @@ const Magazine = (props) => {
     return (
         <div className="flex flex-col w-full lg:max-w-[1920px] h-auto mt-0 mb-0 lg:p-0 bg-cust-background items-center justify-center">
             <div className="flex flex-col w-full lg:bg-[url('https://res.cloudinary.com/dnoqmou6x/image/upload/v1714531632/bgMagfix_eqbhix.png')] mx-auto items-center justify-center">
-                <div className="max-w-max mb-8 pt-16 lg:mb-12 lg:pt-20">
-                    <img src={headMag} alt=""/>
+                <div className="max-w-max mb-8 pt-12 lg:mb-12 lg:pt-20">
+                    <img src={headMag} alt="" className="w-[20rem] xl:w-max" />
                     {/* <h2 className="relative font-lato text-8xl text-cust-green font-bold text-center pb-8">{props.heading}</h2> */}
                     {/* //!add garis dibawah heading nanti */}
                     {/* <div className="relative mx-auto w-22vw h-0.5 bg-cust-lime max-h-max">
