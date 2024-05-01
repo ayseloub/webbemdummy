@@ -68,7 +68,7 @@ export default function CarouselCard() {
             id: 1,
             img: fotoArtikel,
             tanggal: 'Selasa, 22/04/2024',
-            judul: 'Open Tender Ketua Angkatan Filkom 2024',
+            judul: 'Open Tender Ketua Pelaksana ARTROPOLIS 2024',
         },
         {
             id: 2,
@@ -89,7 +89,7 @@ export default function CarouselCard() {
         <>
             {/*<!-- Component: Card Carousel --> */}
 
-            <div className=" relative w-full h-max -top-10 xl:-top-20 overflow-hidden rounded shadow-xl shadow-slate-200">
+            <div className=" relative w-full h-max  overflow-hidden rounded shadow-xl shadow-slate-200">
                 {/* background */}
                 <img src={bgArtikelPC} alt="" className="hidden xl:flex h-max" />
                 <img src={bgArtikelHP} alt="" className="xl:hidden " />
@@ -100,7 +100,7 @@ export default function CarouselCard() {
                         <img src={ArtikelTittle} alt="" className='absolute w-[20rem] mx-auto text-4xl xl:text-7xl xl:pt-36  xl:w-[43rem]' />
                     </div>
                     {/* slides */}
-                    <div className="overflow-hidden relative top-28 mx-3 xl:top-96" data-glide-el="track">
+                    <div className="overflow-hidden relative top-28 mx-12 xl:top-96" data-glide-el="track">
                         <ul className=" flex flex-wrap w-full mx-auto overflow-hidden">
                             {cards.map((card, index) => (
                                 <li key={card.id} className={`flex justify-center gap-2 xl:gap-28 ${cardsPerSlide > 3 ? 'grid grid-cols-2' : ''}`}>
@@ -113,31 +113,31 @@ export default function CarouselCard() {
                         {/*    <!-- Controls --> */}
                         <div className="flex gap-3 xl:gap-8 w-full h-max items-center justify-center mt-4 xl:mt-10" data-glide-el="controls">
                             {/* Tombol Prev */}
-                            <button className={`h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-white/20 text-slate-700 transition duration-300 hover:border-slate-900 hover:text-slate-900 lg:h-12 lg:w-12 ${activeSlide === 0 ? 'pointer-events-none opacity-50' : ''}`} data-glide-dir="<"
+                            <button className={`h-8 w-8 items-center justify-center rounded-full border border-cust-yellow transition duration-300  lg:h-12 lg:w-12 ${activeSlide === 0 ? 'pointer-events-none opacity-50' : ''}`} data-glide-dir="<"
                                 onClick={prevSlide}
                                 aria-label="prev slide">
-                                <FontAwesomeIcon icon={faChevronLeft} />
+                                <FontAwesomeIcon icon={faChevronLeft} style={{ color: '#FDFADB' }}/>
                             </button>
 
                             {/* Indikator */}
-                            <div className="flex gap-3 xl:gap-8">
+                            <div className="flex gap-3 xl:gap-8 py-1">
                                 {[...Array(totalSlides).keys()].map((indicator) => (
                                     <button
                                         key={indicator}
-                                        className={`group ${activeSlide === indicator ? 'bg-cust-orange' : ''} rounded-full`}
+                                        className={`group rounded-full`}
                                         data-glide-dir={`=${indicator}`}
                                         aria-label={`goto slide ${indicator + 1}`}
                                     >
-                                        <span className="h-8 xl:h-12 justify-center items-center w-8 xl:w-12 p-1 flex rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none">{indicator + 1}</span>
+                                        <span className={`h-9 xl:h-12 justify-center items-center w-8 xl:w-12 p-1 flex rounded-full  ring-1 font-semibold transition-colors duration-300 focus:outline-none text-cust-yellow ${activeSlide === indicator ? 'bg-cust-orange ring-cust-orange' : 'ring-cust-yellow'}`}>{indicator + 1}</span>
                                     </button>
                                 ))}
                             </div>
 
                             {/* Tombol Next */}
-                            <button className={`h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-white/20 text-slate-700 transition duration-300 hover:border-slate-900 hover:text-slate-900 lg:h-12 lg:w-12 ${activeSlide === totalSlides - 1 ? 'pointer-events-none opacity-50' : ''}`} data-glide-dir=">"
+                            <button className={`h-8 w-8 items-center justify-center rounded-full border border-cust-yellow  transition duration-300  lg:h-12 lg:w-12 ${activeSlide === totalSlides - 1 ? 'pointer-events-none opacity-50' : ''}`} data-glide-dir=">"
                                 onClick={nextSlide}
                                 aria-label="next slide">
-                                <FontAwesomeIcon icon={faChevronRight} />
+                                <FontAwesomeIcon icon={faChevronRight} style={{ color: '#FDFADB' }}/>
                             </button>
                         </div>
 

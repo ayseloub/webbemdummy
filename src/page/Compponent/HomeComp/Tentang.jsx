@@ -11,7 +11,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Tentang = () => {
     return (
-        <div className='w-full bg-cust-background h-max py-[30rem] relative xl:py-0 xl:pb-0'>
+        <div className='w-full bg-cust-background h-max xl:-mb-20 py-[30rem] relative xl:py-0 xl:pb-0'>
             {/* BACKGROUND */}
             <img src={bgTentang} alt="" className='hidden xl:block' />
 
@@ -29,8 +29,8 @@ const Tentang = () => {
                 <div className='w-[23rem] rotate-3 h-16 bg-cust-orange rounded-full font-lato text-cust-white text-2xl flex items-center justify-center'>Kabinet Arthakara</div>
                 </div>
                 <div className='mx-8 xl:mx-0 font-lato flex flex-col xl:w-[35rem] '>
-                    <h3 className='text-start font-bold xl:font-extrabold text-lg xl:text-[32px] mt-8 mb-4 xl:mb-8'>Apa itu BEM FILKOM UB?</h3>
-                    <p className='text-justify font-normal text-sm xl:text-2xl mb-5 xl:mb-8 xl:leading-7'>BEM FILKOM UB merupakan badan eksekutif yang memiliki 4 fungsi utama dalam membantu mahasiswa FILKOM UB berproses, diantaranya ialah Pelayanan khususnya dibidang Advokasi dan Kesejahteraan Mahasiswa, Pengembangan dalam mengembangkan soft skill serta minat bakat Mahasiswa, Pengabdian dalam mengamalkan salah satu Tri Dharma Perguruan Tinggi, dan Pergerakan yang mewadahi mahasiswa untuk bertindak dalam mengawal isu yang beredar.</p>
+                    <h3 className='text-start font-bold xl:font-extrabold text-lg xl:text-[32px] mt-8 mb-4 xl:mb-8 text-[#252525]'>Apa itu BEM FILKOM UB?</h3>
+                    <p className='text-justify font-normal text-sm xl:text-2xl mb-5 xl:mb-8 xl:leading-7 text-[#252525]'>BEM FILKOM UB merupakan badan eksekutif yang memiliki 4 fungsi utama dalam membantu mahasiswa FILKOM UB berproses, diantaranya ialah Pelayanan khususnya dibidang Advokasi dan Kesejahteraan Mahasiswa, Pengembangan dalam mengembangkan soft skill serta minat bakat Mahasiswa, Pengabdian dalam mengamalkan salah satu Tri Dharma Perguruan Tinggi, dan Pergerakan yang mewadahi mahasiswa untuk bertindak dalam mengawal isu yang beredar.</p>
                     <button className='w-max ring-1 ring-cust-orange text-cust-orange hover:bg-cust-orange hover:text-white rounded-full px-6 py-2 xl:text-xl'><a href="" target='_blank'>Selengkapnya <FontAwesomeIcon className="relative" icon={faArrowRightLong} /></a></button>
                 </div>
             </div>
@@ -39,12 +39,3 @@ const Tentang = () => {
 }
 
 export default Tentang
-
-
-{/* <div key="1" className="card bg-red-50 xl:w-[18.75rem] xl:h-[18.5rem] xl:rounded-3xl xl:p-5">
-                                <div className=' xl:rounded-3xl w-full h-full'>
-                                    <img src={fotoArtikel} alt="" className='xl:rounded-[.625rem]' />
-                                    <p className='font-poppins text-sm text-cust-gray xl:w-full text-start xl:mt-4'>Selasa, 22/04/2024</p>
-                                    <h3 className='font-poppins xl:w-full text-start xl:mt-2 font-bold text-lg'>Open Tender Ketua Angkatan Filkom 2024</h3>
-                                </div>
-                            </div> */}
