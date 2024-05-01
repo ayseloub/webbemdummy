@@ -21,7 +21,7 @@ const Footer = () => {
           stiffness: 100,
         },
       }}
-      className="cust-outer-container bg-cust-green text-white font-poppins pt-8"
+      className="cust-outer-container bg-cust-green text-white font-lato pt-8"
     >
       <div className="cust-outer-container">
         <div className="cust-outer-container">

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./page/Compponent/HomeComp/Landing";
-import About from "./page/Compponent/HomeComp/About";
+import Home from "./page/Landing";
+import About from "./page/About";
 import Footer from "./page/Compponent/Footer";
 import Navbar from "./page/Compponent/Navbar";
 
@@ -11,7 +11,7 @@ function App() {
  
 
   return (
-    <div>
+
       <BrowserRouter>
       <Navbar />
         <Routes>
@@ -20,7 +20,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </div>
+
   );
 }
 

@@ -21,6 +21,10 @@ module.exports = {
         "cust-bg-orange": "#FDE6BA",
         'cust-bg-orange2': '#FE7201',
       },
+      width:{
+        '22vw': '22.2vw',
+        '1/12vw': '8.33vw',
+      }
     },
   },
   variants: {

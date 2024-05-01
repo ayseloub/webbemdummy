@@ -4,7 +4,7 @@ import maskot from "../../../assets/maskot.svg";
 
 const Modal = ({ onClose, selectedItem }) => (
   <div className='bg-black bg-opacity-30 backdrop-blur-sm inset-0 fixed z-50 flex justify-center items-center'>
-    <div className='px-6 py-6 bg-white container-md size-content relative'>
+    <div className='px-8 py-6 bg-white container-md rounded-xl size-content relative'>
       <button className='absolute top-2 right-2 hover:bg-cust-orange' onClick={onClose}> <SquareX/></button>
       <div className='box-border drop-shadow-lg border-slate-100'>
           <img src={selectedItem.imageSrc} alt={selectedItem.altText} className="pt-4 size-36 mx-auto" />
