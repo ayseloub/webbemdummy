@@ -9,6 +9,7 @@ import caneyo from "../../../assets/caneyo-Partner.png";
 import Modal from "./Modal";
 import SponsorItem from "./SponsorItem";
 import React, { useState } from "react";
+import background from "../../../assets/bgcorak.svg";
 
 const sponsorItems = [
     { 
@@ -100,9 +101,9 @@ const sponsorItems = [
   };
   
   return (
-    <div className="box-border bg-cust-yellow h-screen">
-      <img src={Partner} alt="Partner" className="mx-auto" />
-      <Marquee direction="right" autoFill={true} className="mb-4">
+    <div className="box-border bg-cust-yellow h-140" style={{ backgroundImage: `url(${background})` }}>
+      <img src={Partner} alt="Partner" className="mx-auto mb-8" />
+      <Marquee direction="right" autoFill={true} className="mb-10">
         <div className="flex">
           {sponsorItems.map((item, index) => (
             <button key={index} onClick={() => handleShowModal(item)}>
