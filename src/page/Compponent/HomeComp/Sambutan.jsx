@@ -1,19 +1,23 @@
 import background from "../../../assets/kremBg.svg";
 import underline from "../../../assets/underlineJudul.svg";
 import contoh from "../../../assets/contohPirza.png";
-import sambutan from "../../../assets/sambutan.svg"
+import sambutan from "../../../assets/sambutan.svg";
+import popupPres from "../../../assets/popupPres.svg";
 import { motion } from "framer-motion";
 import { Popper } from '@mui/base/Popper';
 import React, { useState } from "react";
 import ReadMoreReact from 'read-more-react';
 
-const Sambutan = () => {
+const Sambutan = () => {  
   const [anchorElPresiden, setAnchorElPresiden] = useState(null);
   const [anchorElWakilPresiden, setAnchorElWakilPresiden] = useState(null);
+  const [anchorElWakilPresiden1, setAnchorElWakilPresiden1] = useState(null);
   const [isHoveredPresiden, setIsHoveredPresiden] = useState(false);
   const [isHoveredWakilPresiden, setIsHoveredWakilPresiden] = useState(false);
+  const [isHoveredWakilPresiden1, setIsHoveredWakilPresiden1] = useState(false);
   const [isPictureDownPresiden, setIsPictureDownPresiden] = useState(false);
   const [isPictureDownWakilPresiden, setIsPictureDownWakilPresiden] = useState(false);
+  const [isPictureDownWakilPresiden1, setIsPictureDownWakilPresiden1] = useState(false);
 
   const handleClickPresiden = (event) => {
     setAnchorElPresiden(anchorElPresiden ? null : event.currentTarget);
@@ -35,138 +39,176 @@ const Sambutan = () => {
     }, 2000);
   };
 
+  const handleClickWakilPresiden1 = (event) => {
+    setAnchorElWakilPresiden1(anchorElWakilPresiden1 ? null : event.currentTarget);
+    setIsHoveredWakilPresiden1(true);
+    setIsPictureDownWakilPresiden1(!isPictureDownWakilPresiden1);
+
+    setTimeout(() => {
+      setIsHoveredWakilPresiden1(false);
+    }, 2000);
+  };
+
   const openPresiden = Boolean(anchorElPresiden);
   const openWakilPresiden = Boolean(anchorElWakilPresiden);
+
+  
+  const openPresiden1 = Boolean(anchorElPresiden);
+  const openWakilPresiden1 = Boolean(anchorElWakilPresiden);
 
   const idPresiden = openPresiden ? 'presiden-popper' : undefined;
   const idWakilPresiden = openWakilPresiden ? 'wakil-presiden-popper' : undefined;
 
+  const idPresiden1 = openPresiden1 ? 'presiden1-popper' : undefined;
+  const idWakilPresiden1 = openWakilPresiden1 ? 'wakil-presiden1-popper' : undefined;
+
   return (
     <div className="overflow-hidden w-full h-full bg-[-100px] sm:bg-[-100px] md:bg-[0px] lg:bg-[0px] bg-cover" style={{ backgroundImage: `url(${background})` }}>
-      <div className="cust-container">
-        <div className="grid grid-cols-4 lg:grid-cols-4 lg:gap-2 py-10">
-          <div className="col-span-full flex flex-col items-center">
-            <div className="items-center">
-            <motion.img
-              initial={{ opacity: 0, y: 50, x: 0 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  type: "ease",
-                  duration: 1.0,
-                  damping: 10,
-                  stiffness: 40,
-                },
-              }}
-              src={sambutan}
-              className="mx-auto w-full"
-            />
-            </div>
-            <motion.img
-              initial={{ opacity: 0, y: 50, x: 0 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  type: "ease",
-                  duration: 1.0,
-                  damping: 10,
-                  stiffness: 40,
-                },
-              }}
-              src={underline}
-              className="lg:w-[200px] mt-2"
-            />
-          </div>
-          <div className="mt-10" style={{ transition: 'margin-top 0.5s' }}>
-            <button
-              className="ring-1 ring-cust-green hover:ring-cust-white bg-cust-green outline-3 outline-gray-200 focus:outline-cust-white focus:outline-5 text-white text-lg font-semibold py-1.5 px-5 rounded-full ml-28"
-              aria-describedby={idPresiden}
-              type="button"
-              onClick={handleClickPresiden}
-            >
-              Presiden
-            </button>
-            <Popper
-              id={idPresiden}
-              open={openPresiden}
-              anchorEl={anchorElPresiden}
-            >
-              <div
-                className={`bg-cust-orange rounded-full font-bold font-lato text-sm m-1 p-3 shadow-md text-slate-900 dark:text-slate-100 mt-3 ${isHoveredPresiden ? 'wiggle' : ''}`}
-                style={{ transition: 'transform 0.5s', transformOrigin: 'center', cursor: 'pointer' }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'rotate(6deg)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'rotate(0deg)';
-                }}
-              >
-                Andhika Satria P.
-              </div>
-            </Popper>
-            <motion.img
-               initial={{ opacity: 0, y: 50, x: 0, z:0 }}
-               whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  type: "ease",
-                  duration: 1.0,
-                  damping: 10,
-                  stiffness: 40,
-                },
-              }}
-               animate={{ marginTop: isPictureDownPresiden ? '80px' : '30px' }}
-               src={contoh}
-               className="lg:w-[200px] mt-5 ml-28"
-            />
-          </div>
-          <div className="mt-10">
-            <button
-              className="ring-1 ring-cust-green hover:ring-cust-white bg-cust-green outline-3 outline-gray-200 focus:outline-cust-white  text-white text-lg font-semibold py-1.5 px-5 rounded-full ml-6"
-              aria-describedby={idWakilPresiden}
-              type="button"
-              onClick={handleClickWakilPresiden}
-            >
-              Wakil Presiden
-            </button>
-            <Popper
-              id={idWakilPresiden}
-              open={openWakilPresiden}
-              anchorEl={anchorElWakilPresiden}
-            >
-              <div
-                className={`bg-cust-orange rounded-full font-bold font-lato text-sm m-1 p-3 shadow-md text-slate-900 dark:text-slate-100 mt-3 ${isHoveredWakilPresiden ? 'wiggle' : ''}`}
-                style={{ transition: 'transform 0.5s', transformOrigin: 'center', cursor: 'pointer' }}
-                onMouseEnter={(e) => {
-                  e.target.style.transform = 'rotate(-6deg)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = 'rotate(0deg)';
-                }}
-              >
-                M. Ryan Firdaus
-              </div>
-            </Popper>
-            <motion.img
-               initial={{ opacity: 0, y: 50, x: 0, z:0 }}
-               whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  type: "ease",
-                  duration: 1.0,
-                  damping: 10,
-                  stiffness: 40,
-                },
-              }}
-               animate={{ marginTop: isPictureDownWakilPresiden ? '80px' : '30px' }}
-               src={contoh}
-               className="lg:w-[200px] mt-5 ml-16"
-            />
-          </div>
+  <div className="cust-container">
+    <div className="grid grid-cols-4 lg:grid-cols-4 lg:gap-2 py-10">
+      <div className="col-span-full flex flex-col items-center">
+        <div className="items-center">
+          <motion.img
+            initial={{ opacity: 0, y: 50, x: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "ease",
+                duration: 1.0,
+                damping: 10,
+                stiffness: 40,
+              },
+            }}
+            src={sambutan}
+            className="mx-auto w-full"
+          />
+        </div>
+        <motion.img
+          initial={{ opacity: 0, y: 50, x: 0 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: "ease",
+              duration: 1.0,
+              damping: 10,
+              stiffness: 40,
+            },
+          }}
+          src={underline}
+          className="lg:w-[200px] mt-2"
+        />
+      </div>
+      <div className="mt-10 relative" style={{ transition: 'margin-top 0.5s' }}>
+  <button
+    className="ring-1 ring-cust-green hover:ring-cust-white bg-cust-green outline-3 outline-gray-200 focus:outline-cust-white focus:outline-5 text-white text-lg font-semibold py-1.5 px-5 rounded-full ml-28"
+    aria-describedby={idPresiden}
+    type="button"
+    onClick={handleClickPresiden}
+    style={{ minWidth: "200px" }}
+  >
+    Presiden
+  </button>
+  {openPresiden && (
+    <Popper
+      id={idPresiden}
+      open={openPresiden}
+      anchorEl={anchorElPresiden}
+    >
+      <div>
+      <img src={popupPres} alt="" />
+      </div>
+    </Popper>
+  )}
+  <motion.img
+    initial={{ opacity: 0, y: 50, x: 0, z:0 }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "ease",
+        duration: 1.0,
+        damping: 10,
+        stiffness: 40,
+      },
+    }}
+    animate={{ marginTop: isPictureDownPresiden ? '80px' : '30px' }}
+    src={contoh}
+    className="lg:w-[200px] mt-5 ml-28"
+  />
+</div>
+
+<div className="mt-10 relative" style={{ transition: 'margin-top 0.5s' }}>
+  <div className="wapres" style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <button
+      className="ring-1 ring-cust-green hover:ring-cust-white bg-cust-green outline-3 outline-gray-200 focus:outline-cust-white text-white text-lg font-semibold py-1.5 px-5 rounded-full ml-6"
+      aria-describedby={idWakilPresiden}
+      type="button"
+      onClick={handleClickWakilPresiden}
+      style={{ minWidth: "200px", position: 'relative', zIndex: 1 }}
+    >
+      Wakil Presiden
+    </button>
+    {openWakilPresiden && (
+      <Popper
+        id={idWakilPresiden}
+        open={openWakilPresiden}
+        anchorEl={anchorElWakilPresiden}
+        style={{ position: 'absolute', zIndex: 0 }}
+      >
+        <div
+          className={`bg-cust-orange rounded-full font-bold font-lato text-sm m-1 p-3 shadow-md text-slate-900 dark:text-slate-100 mt-3 ${isHoveredWakilPresiden ? 'wiggle' : ''}`}
+          style={{ transition: 'transform 0.5s', transformOrigin: 'center', cursor: 'pointer' }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'rotate(6deg)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'rotate(0deg)';
+          }}
+        >
+          M. Ryan Firdaus
+        </div>
+      </Popper>
+    )}
+    <Popper
+      id={idWakilPresiden1}
+      open={openWakilPresiden1}
+      anchorEl={anchorElWakilPresiden1}
+      style={{ position: 'absolute', zIndex: 4 }}
+    >
+      <div
+        className={`bg-cust-orange rounded-full font-bold font-lato text-sm m-1 p-3 shadow-md text-slate-900 dark:text-slate-100 mt-3 ${isHoveredWakilPresiden1 ? 'wiggle' : ''}`}
+        style={{ transition: 'transform 0.5s', transformOrigin: 'center', cursor: 'pointer' }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'rotate(-6deg)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'rotate(0deg)';
+        }}
+      >
+        M. Ryan Firdaus
+      </div>
+    </Popper>
+    <motion.img
+      initial={{ opacity: 0, y: 50, x: 0, z:0 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "ease",
+          duration: 1.0,
+          damping: 10,
+          stiffness: 40,
+        },
+      }}
+      animate={{ marginTop: isPictureDownWakilPresiden ? '80px' : '30px' }}
+      src={contoh}
+      className="lg:w-[200px] mt-5 ml-16"
+    />
+  </div>
+</div>
+
           <div className="mt-10 text-justify mr-5 ml-10 col-span-2 mr-20 pr-20 text-[20px] font-lato">
             <motion.div
            initial={{ opacity: 0, x: 100 }}

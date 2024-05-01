@@ -1,21 +1,20 @@
 import React from "react";
-import background from "../../../assets/welcoming.svg"
-import gedung from "../../../assets/gedungFilkom.png"
-import arthakaraBubble from "../../../assets/arthakaraBubble.png"
-import awanKrem from "../../../assets/awanKrem.png"
+import background from "../../../assets/welcoming.svg";
+import gedung from "../../../assets/gedungFilkom.png";
+import arthakaraBubble from "../../../assets/arthakaraBubble.png";
+import awanKrem from "../../../assets/awanKrem.png";
 import { motion } from "framer-motion";
 import Atropos from "atropos/react";
 
 const Welcome = () => {
   return (
-    <div  className="overflow-hidden w-full h-full bg-[-100px] sm:bg-[-100px] md:bg-[0px] lg:bg-[0px] bg-cover"
-    style={{ backgroundImage: `url(${background})` }}>
-     <Atropos
+    <div className="overflow-hidden w-full h-full bg-[-100px] sm:bg-[-100px] md:bg-[0px] lg:bg-[0px] bg-cover" style={{ backgroundImage: `url(${background})` }}>
+      <Atropos
         shadow={true}
         shadowOffset={50}
         highlight={true}
         duration={100}
-        className="absolute group top-[320px] 2xl:right-[760px] xl:right-[600px] lg:right-[500px]  hidden lg:block"
+        className="absolute group top-[320px] xxl:right-[650px] xl:right-[450px] lg:right-[450px]  hidden lg:block"
       >
         <img
           data-atropos-offset="15"
@@ -26,7 +25,7 @@ const Welcome = () => {
       </Atropos>
       <div className="lg:flex lg:justify-center font-lato h-full pt-[170px] lg:pt-[150px]">
         <div className="lg:mt-[60px] lg:mx-auto text-center pb-[70px] sm:pb-[50px] ml-[10px] sm:ml-[20px]">
-        <motion.div
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -41,7 +40,7 @@ const Welcome = () => {
           >
             Selamat datang di
           </motion.div>
-        <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{
               opacity: 1,
@@ -54,6 +53,9 @@ const Welcome = () => {
               },
             }}
             className="text-[40px] sm:text-[60px] w-full h-[45px] sm:h-[60px] lg:h-[90px] lg:text-[65px] xl:text-[80px] text-cust-lime font-extrabold"
+            style={{
+              textShadow: "0 0 1.5px #BCDB37",
+            }}
           >
             BEM FILKOM
           </motion.div>
@@ -70,13 +72,15 @@ const Welcome = () => {
               },
             }}
             className="text-[40px] sm:text-[60px] w-full lg:text-start lg:text-[65px] xl:text-[80px] text-cust-lime text-bold font-extrabold"
+            style={{
+              textShadow: "0 0 1.5px #BCDB37",
+            }}
           >
             UB 2024
           </motion.div>
-          
         </div>
         <div className="mx-auto mt-auto lg:mt-0">
-        <motion.img
+          <motion.img
             initial={{ opacity: 0, y: 50, x: 0 }}
             whileInView={{
               opacity: 1,
@@ -94,10 +98,7 @@ const Welcome = () => {
         </div>
       </div>
       <div>
-        <img 
-        src={awanKrem} 
-        className="" 
-        />
+        <img src={awanKrem} className="" alt="awanKrem" />
       </div>
     </div>
   );
